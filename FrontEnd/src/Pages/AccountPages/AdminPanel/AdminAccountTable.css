@@ -1,0 +1,98 @@
+.search-bar {
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+    outline: none;
+}
+
+.admin-info-table {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    border-bottom: 2px solid rgba(193, 193, 193, 0.592);
+}
+
+.edit-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-funds {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fund-amount {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.edit-confirm {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4A90E2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-confirm:hover {
+    background-color: #357ABD;
+}
+
+.purge-account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.purge-account button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4A90E2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.purge-account button:hover {
+    background-color: #357ABD;
+}
+
+.edit-return-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #D9534F;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-return-button:hover {
+    background-color: #C9302C;
+}

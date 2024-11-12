@@ -1,0 +1,63 @@
+/*Scheduled bills table */
+.scheduled-bills-table {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: auto;
+    border-bottom: 2px solid rgba(193, 193, 193, 0.592);
+  }
+  .styled-table {
+    width: 100%;
+    height: 50%;
+    border-collapse: collapse;
+  }
+
+  .styled-table th, .styled-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+
+  }
+
+  .styled-table th {
+    background-color: #1a3b4a;
+    color: white;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+
+  .styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  .styled-table tr:hover {
+    background-color: #ddd;
+  }
+
+  .styled-table td {
+    color: #333;
+    font-size: 16px;
+    height: 25px;
+    z-index: 0;
+  }
+
+  .styled-table th {
+    font-size: 18px;
+  }
+  @media(max-width:660px) {
+    .styled-table th{
+      font-size: 16px;
+    }
+    .styled-table td {
+      font-size: 14px;
+    }
+  }
+  @media(max-width:400px) {
+    .styled-table th{
+      font-size: 12px;
+    }
+    .styled-table td {
+      font-size: 10px;
+    }
+  }

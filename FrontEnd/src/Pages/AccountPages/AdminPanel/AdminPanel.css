@@ -1,0 +1,140 @@
+.settings {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.settings-header {
+    background-color: #0D99FF;
+    width: 90%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.settings-header p {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    margin-left: 55px;
+}
+
+.settings-container {
+    padding: 20px;
+    width: 90%;
+    height: 67vh;
+}
+
+.instructions-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.instructions-toggle p ,.reset-password-setting p {
+    font-size: 38px;
+    margin-left: 25px;
+}
+
+.instructions-toggle label {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.instructions-toggle-switch {
+    display: none;
+}
+
+.instructions-slider {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #ccc;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-right: 960px;
+    transition: background-color 0.4s;
+}
+
+.instructions-slider:before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    bottom: 2px;
+    left: 2px;
+    transition: transform 0.4s;
+}
+
+.instructions-toggle-switch:checked + .instructions-slider {
+    background-color: #2196F3;
+}
+
+.instructions-toggle-switch:checked + .instructions-slider:before {
+    transform: translateX(30px);
+}
+
+.reset-password-setting {
+    display: flex;
+    flex-direction: row;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-left: 75px;
+    font-size: larger;
+}
+
+.reset-button:hover {
+    background-color: #0b7dda;
+}
+@media(max-width:1280px) {
+
+}
+@media(max-width:1024px) {
+    .settings-header p {
+        font-size: 36px;
+    }
+}
+@media(max-width:800px) {
+    .settings-header {
+        margin-top: 42px;
+    }
+    .instructions-toggle p ,.reset-password-setting p {
+        font-size: 30px;
+    }
+    .reset-button {
+        margin-left: 30px;
+        font-size: 22px;
+    }
+}
+@media(max-width:620px) {
+    .instructions-toggle p ,.reset-password-setting p {
+        font-size: 22px;
+    }
+    .reset-button {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+}
+@media(max-width:400px) {
+    .settings-header p {
+        font-size: 25px;
+    }
+
+}

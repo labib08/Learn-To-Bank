@@ -1,0 +1,163 @@
+.forgot {
+    width: 100%;
+    height: 100vh;
+    background: #8fd3f2;
+    padding-top: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.forgot-container {
+    width: 600px;
+    height: 700px;
+    background: white;
+    margin: auto;
+    padding:40px 60px;
+    border-radius: 15px;
+}
+
+.forgot-container .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 45px;
+}
+
+.forgot-container .logo img {
+    height: 22%;
+    width: 22%;
+}
+
+.forgot-container h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+    margin-bottom: 60px;
+}
+
+.forgot-text {
+    margin-bottom: 45px;
+}
+
+.forgot-container input {
+    height: 72px;
+    width: 580px;
+    font-size: 18px;
+    color: #5c5c5c;
+    padding-left: 20px;
+}
+
+.forgot-container button {
+    margin-top: 45px;
+    width: 100%;
+    height: 72px;
+    color: white;
+    background-color:#1a3b4a;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+}
+.forgot-agree span{
+    color: #1a3b4a;
+    font-weight: 600;
+  }
+.forgot-agree {
+    display: flex;
+    align-items: center;
+    padding: 10px 0px 10px 0px;
+    color: #000000;
+  }
+.forgot-signup-link {
+
+    color: #1a3b4a;
+    font-weight: 600;
+}
+@media(max-width:750px) {
+    .forgot-container {
+        width: 520px;
+    }
+
+    .forgot-text {
+        font-size: 16px;
+    }
+    .forgot-container input {
+        height: 60px;
+        width: 500px;
+        font-size: 16px;
+    }
+    .forgot-container button {
+        height: 60px;
+    }
+}
+@media(max-width:650px) {
+    .forgot-container {
+        width: 440px;
+    }
+
+    .forgot-text {
+        font-size: 16px;
+    }
+    .forgot-container input {
+        height: 60px;
+        width: 420px;
+        font-size: 16px;
+    }
+    .forgot-container button {
+        height: 60px;
+    }
+}
+@media(max-width:600px) {
+    .forgot-container {
+        width: 380px;
+    }
+
+    .forgot-text {
+        font-size: 14px;
+    }
+    .forgot-container input {
+        height: 60px;
+        width: 360px;
+        font-size: 14px;
+    }
+    .forgot-container button {
+        height: 60px;
+    }
+}
+@media(max-width:520px) {
+    .forgot-container {
+        width: 300px;
+    }
+
+    .forgot-text {
+        font-size: 14px;
+    }
+    .forgot-container input {
+        height: 60px;
+        width: 280px;
+        font-size: 14px;
+    }
+    .forgot-container button {
+        height: 60px;
+    }
+}
+@media(max-width:440px) {
+    .forgot-container {
+        width: 220px;
+    }
+
+    .forgot-text {
+        font-size: 14px;
+    }
+    .forgot-container input {
+        height: 40px;
+        width: 200px;
+        font-size: 14px;
+    }
+    .forgot-container button {
+        height: 40px;
+    }
+}

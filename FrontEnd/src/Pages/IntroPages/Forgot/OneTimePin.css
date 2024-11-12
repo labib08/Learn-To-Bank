@@ -1,0 +1,151 @@
+.otp {
+    width: 100%;
+    height: 100vh;
+    background: #8fd3f2;
+    padding-top: 50px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.otp-container {
+    width: 600px;
+    height: 700px;
+    background: white;
+    margin: auto;
+    padding:40px 60px;
+    border-radius: 15px;
+}
+
+.otp-container .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.otp-container .logo img {
+    height: 22%;
+    width: 22%;
+}
+
+.otp-container h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 250%;
+    margin-bottom: 30px;
+}
+
+.otp-text {
+    margin-bottom: 20px;
+}
+
+.otp-container input {
+    height: 72px;
+    width: 580px;
+    font-size: 18px;
+    color: #5c5c5c;
+    padding-left: 20px;
+}
+
+.enter-otp input {
+    margin-bottom: 20px;
+}
+
+.otp-container button {
+    width: 100%;
+    height: 72px;
+    color: white;
+    background-color:#1a3b4a;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    border-radius: 15px;
+}
+@media(max-width:750px) {
+    .otp-container {
+        width: 520px;
+    }
+
+    .otp-text {
+        font-size: 16px;
+    }
+    .otp-container input {
+        height: 60px;
+        width: 500px;
+        font-size: 16px;
+    }
+    .otp-container button {
+        height: 60px;
+    }
+}
+@media(max-width:650px) {
+    .otp-container {
+        width: 440px;
+    }
+
+    .otp-text {
+        font-size: 16px;
+    }
+    .otp-container input {
+        height: 60px;
+        width: 420px;
+        font-size: 16px;
+    }
+    .otp-container button {
+        height: 60px;
+    }
+}
+@media(max-width:600px) {
+    .otp-container {
+        width: 380px;
+    }
+
+    .otp-text {
+        font-size: 14px;
+    }
+    .otp-container input {
+        height: 60px;
+        width: 360px;
+        font-size: 14px;
+    }
+    .otp-container button {
+        height: 60px;
+    }
+}
+@media(max-width:520px) {
+    .otp-container {
+        width: 300px;
+    }
+
+    .otp-text {
+        font-size: 14px;
+    }
+    .otp-container input {
+        height: 60px;
+        width: 280px;
+        font-size: 14px;
+    }
+    .otp-container button {
+        height: 60px;
+    }
+}
+@media(max-width:440px) {
+    .otp-container {
+        width: 220px;
+    }
+
+    .otp-text {
+        font-size: 14px;
+    }
+    .otp-container input {
+        height: 40px;
+        width: 200px;
+        font-size: 14px;
+    }
+    .otp-container button {
+        height: 40px;
+    }
+}

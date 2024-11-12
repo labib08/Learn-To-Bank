@@ -1,0 +1,500 @@
+.view {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+.mobile-view {
+    display: none;
+}
+
+.view-header {
+    background-color: #0D99FF;
+    width: 90vw;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.view-container {
+    width: 90vw;
+    height: 109vh;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    margin-top: 0;
+}
+.view-header p {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    margin-left: 55px;
+}
+
+.view-sidebar {
+    display: flex;
+    border-right: 1px solid rgb(146, 145, 145);
+    flex-direction: column;
+    min-width: 21vw;
+    background-color: #D9D9D9;
+}
+
+.sidebar-profile, .sidebar-savings, .sidebar-transactions {
+    font-size: 28px;
+    border-bottom: 1px solid rgb(146, 145, 145);
+
+}
+
+.sidebar-profile-active, .sidebar-savings-active, .sidebar-transactions-active {
+    font-size: 28px;
+    border-bottom: 1px solid rgb(146, 145, 145);
+    background-color: white;
+    border-left: 10px solid #0D99FF;
+    pointer-events: none;
+}
+
+.view-sidebar p {
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+.sidebar-profile:hover, .sidebar-savings:hover, .sidebar-transactions:hover {
+    cursor: pointer;
+    background-color: rgb(244, 243, 243);
+}
+
+.view-content h1 {
+    padding-left: 15px;
+}
+.view-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Account Details CSS */
+.view-user-profile {
+    margin-left: 20px;
+    margin-top: 30px;
+    flex: 1;
+}
+
+.view-user-profile h1 {
+    font-size: 50px;
+    width: 30vw;
+    padding-bottom: 15px;
+}
+
+.view-user-info {
+    padding-bottom: 10px;
+    padding-left: 5px;
+    width: 40vw;
+}
+
+.view-user-info label {
+    font-weight: bold;
+    margin: 20px 10px 20px 10px;
+    font-size: 30px;
+}
+
+.view-user-info span {
+    color: rgb(62, 62, 62);
+    font-size: 25px;
+}
+
+.edit-profile-button {
+    background-color: #2196F3;
+    padding: 15px 45px;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    margin: 20px;
+    font-size: larger;
+}
+
+.edit-profile-button:hover {
+    background-color: #0b7dda;
+}
+
+/* credit card css */
+.credit-card-container {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.credit-card {
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    transform-origin: center;
+}
+
+.credit-card:hover {
+    cursor: pointer;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Arial', sans-serif;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #207cca 100%);
+}
+
+.card-back {
+    background: linear-gradient(135deg, #207cca 0%, #2989d8 50%, #1e5799 100%);
+    transform: rotateY(180deg);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-chip {
+    width: 40px;
+    height: 30px;
+    background: #d4d4d4;
+    border-radius: 5px;
+}
+
+.card-number {
+    margin: 20px 0;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.card-holder, .card-expiry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-holder span, .card-expiry span {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.card-holder-name, .card-expiry-date {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.card-bsb, .card-account-number, .card-cvv {
+    margin: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.credit-card.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Transaction History Table CSS */
+
+.scrollable-container {
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.transaction-table {
+    width: 69vw;
+    border-collapse: collapse;
+}
+
+.transaction-table th, .transaction-table td {
+    border: 1px solid rgb(146, 145, 145, 1);
+    padding: 12px;
+    text-align: left;
+}
+.month-header td {
+    background-color: #acacac;
+    color:black;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+
+}
+.search-container {
+    margin-bottom: 20px;
+  }
+
+.search-input {
+    width: 100%;
+    max-width: 450px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 35px;
+}
+.transaction-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.transaction-table tr:hover{
+    background-color: #ddd;
+}
+
+.transaction-table th {
+    text-align: left;
+    position: sticky;
+    font-size: 18px;
+    top: 0;
+    z-index: 1;
+    background-color: #1a3b4a;
+    color: white;
+}
+
+.transact-desc {
+    width: 50%;
+}
+
+.transaction-table .incoming {
+    color: green;
+}
+
+.transaction-table .outgoing {
+    color: red;
+}
+@media(max-width:1280px) {
+    .sidebar-profile, .sidebar-savings, .sidebar-transactions {
+        font-size: 22px;
+    }
+    .view-user-profile h1 {
+        font-size: 38px;
+    }
+    .view-user-info label {
+        font-size: 25px;
+    }
+    .view-user-info span {
+        font-size: 20px;
+    }
+    .edit-profile-button {
+        font-size: 18px;
+    }
+    .credit-card-container {
+        margin-top: 30px;
+        margin-right: 20px;
+        margin-left: -50px;
+    }
+    .credit-card {
+        width: 260px;
+        height: 140px;
+    }
+    .card-logo {
+        font-size: 22px;
+    }
+    .card-number {
+        font-size: 18px;
+    }
+    .card-holder span, .card-expiry span {
+        font-size: 10px;
+    }
+    .card-holder-name, .card-expiry-date {
+        font-size: 14px;
+    }
+    .card-bsb, .card-account-number, .card-cvv {
+        font-size: 14px;
+    }
+}
+@media(max-width:1024px) {
+    .view-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 15px;
+    }
+
+    .credit-card-container {
+        margin-top: 30px;
+        margin-right: 20px;
+        margin-left: 15px;
+    }
+    .view-user-profile h1 {
+        font-size: 37px;
+    }
+    .sidebar-profile, .sidebar-savings, .sidebar-transactions {
+        font-size: 18px;
+    }
+    .view-sidebar p {
+        margin-left: 10px;
+    }
+    .sidebar-profile-active, .sidebar-savings-active, .sidebar-transactions-active {
+        border-left: 8px solid #0D99FF;
+    }
+    .view-header p {
+        font-size: 36px;
+    }
+    .transaction-table th {
+        font-size: 16px;
+    }
+    .transaction-table tbody {
+        font-size: 15px;
+    }
+
+}
+@media(max-width:800px) {
+    .view-header {
+        margin-top: 42px;
+    }
+    .mobile-view {
+        display: flex;
+        color: white;
+        font-weight: 600;
+        font-size: 25px;
+        align-items: center;
+        margin-left: 10px;
+    }
+    .view-container {
+        display: flex;
+        justify-content: center;
+    }
+    .view-sidebar {
+        display: none;
+    }
+    .sidebar-profile, .sidebar-savings, .sidebar-transactions {
+        font-size: 28px;
+        border-bottom: 1px solid rgb(146, 145, 145);
+
+    }
+    .view-user-info label {
+        margin-right: 7px;
+    }
+    .view-user-profile h1 {
+        font-size: 23px;
+    }
+    .credit-card-container {
+        margin-left: 0px;
+    }
+    .view-user-profile {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .search-input {
+        max-width: 300px;
+    }
+
+}
+@media(max-width:600px) {
+    .view-user-profile {
+        margin-left: -80px;
+        margin-top: 30px;
+    }
+    .transaction-table th {
+        font-size: 14px;
+    }
+    .transaction-table tbody {
+        font-size: 12px;
+    }
+}
+@media(max-width:500px) {
+    .view-user-profile h1 {
+        font-size: 20px;
+    }
+    .mobile-view {
+        font-size: 15px;
+    }
+    .view-user-info label {
+        font-size: 17px;
+    }
+    .view-user-info span {
+        font-size: 16px;
+    }
+    .edit-profile-button {
+        font-size: 18px;
+    }
+    .view-user-profile {
+        margin-left: -80px;
+        margin-top: 30px;
+    }
+    .search-input {
+        max-width: 250px;
+    }
+
+}
+@media(max-width:400px) {
+    .view-header p {
+        font-size: 25px;
+    }
+    .view-user-profile h1 {
+        font-size: 20px;
+    }
+    .view-user-info label {
+        font-size: 14px;
+        margin: 20px 2px 20px 10px;
+    }
+    .view-user-info span {
+        font-size: 13px;
+    }
+    .edit-profile-button {
+        font-size: 15px;
+    }
+    .credit-card-container {
+        margin-top: 30px;
+        margin-right: 20px;
+        margin-left: 10px;
+    }
+    .credit-card {
+        width: 220px;
+        height: 140px;
+    }
+    .card-logo {
+        font-size: 20px;
+    }
+    .card-number {
+        font-size: 16px;
+    }
+    .card-holder span, .card-expiry span {
+        font-size: 9px;
+    }
+    .card-holder-name, .card-expiry-date {
+        font-size: 12px;
+    }
+    .card-bsb, .card-account-number, .card-cvv {
+        font-size: 12px;
+    }
+    .search-input {
+        max-width: 200px;
+    }
+}

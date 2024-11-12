@@ -1,0 +1,265 @@
+@host = http://localhost:5000/api/v1
+
+### Create Account 1
+POST https://learn-to-bank-backend-7mtr.onrender.com/api/accounts/create
+Content-Type: application/json
+
+{
+  "name": "Mitchell Zheng",
+  "email": "mitchell@example.com",
+  "username": "mitchellzheng",
+  "password": "password123"
+}
+
+### Create Account 1 - email failure
+POST https://learn-to-bank-backend-7mtr.onrender.com/api/accounts/create
+Content-Type: application/json
+
+{
+  "name": "imposter man",
+  "email": "person@example.com",
+  "username": "idontexist",
+  "password": "password123"
+}
+
+### Create Account 2
+POST http://localhost:5000/api/accounts/create
+Content-Type: application/json
+
+{
+  "name": "Fischer Zhang",
+  "email": "fischer@example.com",
+  "username": "fischerzhang",
+  "password": "password1234"
+}
+
+### Login Account
+# @name login
+POST http://localhost:5000/api/accounts/login
+Content-Type: application/json
+
+{
+  "username": "mitchellzheng",
+  "password": "password123"
+}
+
+### Transfer Money
+POST http://localhost:5000/api/transactions/transfer
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "toAccNo": "27618500",
+  "toBsb": "536193",
+  "amount": 1000,
+  "description": ""
+}
+
+### Transfer Money PayID
+POST http://localhost:5000/api/transactions/payIdTransfer
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "toPhoneNo": "5424712610",
+  "amount": 30,
+  "description": ""
+}
+
+### Transfer Between Account
+POST http://localhost:5000/api/transactions/transfer/within
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "username": "mitchellzheng", 
+  "fromAccountType": "transaction", 
+  "toAccountType": "savings", 
+  "amount": 1000, 
+  "description": "transfer to savings" 
+}
+
+### Get Account Info
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/accounts/getUser
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+### Delete Account
+POST http://localhost:5000/api/admin/delete
+Content-Type: application/json
+
+{
+  "username": "mitchellzheng"
+}
+
+### Admin - Create Account
+POST http://localhost:5000/api/accounts/create
+Content-Type: application/json
+
+{
+  "name": "John Admin",
+  "email": "admin@example.com",
+  "username": "admin",
+  "password": "admin123"
+}
+
+### Admin - Login Account
+# @name admin
+POST http://localhost:5000/api/accounts/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin123"
+}
+
+### Admin - get Database
+@adminAuthToken = {{admin.response.body.token}}
+POST http://localhost:5000/api/admin/getDatabase
+Content-Type: application/json
+Authorization: Bearer {{adminAuthToken}}
+
+### Admin - set user balance
+POST http://localhost:5000/api/admin/setBalance
+Content-Type: application/json
+
+{
+  "accNumber": "82085951",
+  "newBalance": 50000
+}
+
+### Add contact - Bsb & Account Number
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/accounts/addContact
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "name": "Fischer Zhang",
+  "bsb": "897716",
+  "accNo": "53089132"
+}
+
+### Add contact - PayId
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/accounts/addContact
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "name": "Fischer Zhang",
+  "phoneNo": "8408944303"
+}
+
+### Remove contact - Bsb & Account Number
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/accounts/removeBankContact
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "bsb": "897716",
+  "accNo": "53089132"
+}
+
+### Remove contact - PayId
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/accounts/removePayIdContact
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "phoneNo": "8408944303"
+}
+
+### Get contact - Bank
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/accounts/getBankContacts
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+### Get contact - PayId
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/accounts/getPayIdContacts
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+### Schedule Payment BANK - once
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/transactions/schedulePayment
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "fromAccountType": "transaction",
+  "name": "Fischer Zhang",
+  "toAccNo": "92126057",
+  "toBsb": "596989",
+  "amount": "100",
+  "description": "Schedule Payment BANK - once",
+  "scheduleOption": "once",
+  "scheduledDate": "2024-10-11"
+}
+
+### Schedule Payment BANK - recurring
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/transactions/schedulePayment
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "fromAccountType": "transaction",
+  "name": "Fischer Zhang",
+  "toAccNo": "92126057",
+  "toBsb": "596989",
+  "amount": "100",
+  "description": "Schedule Payment BANK - recurring",
+  "scheduleOption": "recurring",
+  "scheduledDate": "2024-10-11",
+  "frequency": "weekly",
+  "totalRuns": "3"
+}
+
+### Schedule Payment PAYID - once
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/transactions/schedulePayment
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "fromAccountType": "transaction",
+  "name": "Fischer Zhang",
+  "toPhoneNo": "7623484114",
+  "amount": "100",
+  "description": "Schedule Payment PAYID - once",
+  "scheduleOption": "once",
+  "scheduledDate": "2024-10-11"
+}
+
+### Schedule Payment PAYID - recurring
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/transactions/schedulePayment
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+{
+  "fromAccountType": "transaction",
+  "name": "Fischer Zhang",
+  "toPhoneNo": "7623484114",
+  "amount": "100",
+  "description": "Schedule Payment PAYID - recurring",
+  "scheduleOption": "recurring",
+  "scheduledDate": "2024-10-11",
+  "frequency": "weekly",
+  "totalRuns": "3"
+}
+
+### Get All Scheduled Payments
+@userAuthToken = {{login.response.body.token}}
+POST http://localhost:5000/api/transactions/getScheduledPayments
+Content-Type: application/json
+Authorization: Bearer {{userAuthToken}}
+
+### Chatbot
+POST http://localhost:5000/api/chatbot

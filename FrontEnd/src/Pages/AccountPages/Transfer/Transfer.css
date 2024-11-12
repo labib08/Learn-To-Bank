@@ -1,0 +1,607 @@
+/* Transfer section */
+
+.transfer {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .mobile-view {
+    display: none;
+  }
+  .transfer-header {
+    background-color: #0D99FF;
+    width: 90vw;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .transfer-section {
+    width: 90vw;
+    min-height: 109vh;
+    background-color: rgb(235, 235, 235);
+    display: flex;
+    margin-top: 0;
+
+  }
+  .transfer-header p {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    margin-left: 55px;
+  }
+
+  .transfer-section-sidebar {
+    display: flex;
+    border-right: 1px solid rgb(146, 145, 145);
+    flex-direction: column;
+    min-width: 21vw;
+    background-color: #D9D9D9;
+
+  }
+
+  .transfer-section-sidebar-categories {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 30px;
+    font-size:28px;
+    margin-left: 0;
+    align-items: center;
+  }
+
+
+  .transfer-section-sidebar-first-elem,
+  .transfer-section-sidebar-second-elem,
+  .transfer-section-sidebar-third-elem {
+    font-size:28px;
+    border-bottom: 1px solid rgb(146, 145, 145);
+
+  }
+  .transfer-section-sidebar-first-elem-active,
+  .transfer-section-sidebar-second-elem-active,
+  .transfer-section-sidebar-third-elem-active{
+    font-size:28px;
+    border-bottom: 1px solid rgb(146, 145, 145);
+    background-color: white;
+    border-left: 10px solid #0D99FF;
+    pointer-events: none;
+  }
+  .transfer-section-sidebar-first-elem:hover,
+  .transfer-section-sidebar-second-elem:hover,
+  .transfer-section-sidebar-third-elem:hover {
+    cursor: pointer;
+    background-color: rgb(244, 243, 243);
+  }
+  .transfer-section-sidebar-first-elem p,
+  .transfer-section-sidebar-second-elem p,
+  .transfer-section-sidebar-third-elem p {
+    margin-top:25px;
+    margin-left: 20px;
+    margin-bottom: 25px;
+  }
+
+  .transfer-section-content {
+    display: flex;
+    flex-direction: column;
+
+  }
+  .transfer-section-content form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .transfer-section-content-header {
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 50px;
+    margin-top: 25px;
+  }
+
+  .transfer-section-content span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 50px;
+  }
+
+  .transfer-section-content-sub-header {
+    font-weight: 500;
+    font-size: 22px;
+    flex: 1;
+  }
+
+
+  .transfer-section-schedule {
+    display: flex;
+    align-items: center;
+  }
+  .sender-account-select, .transfer-method-select,
+  .transfer-description-textarea, .transfer-amount-input,
+  .transfer-schedule-select,
+  .transfer-date-input, .transfer-recurring-select,
+  .transfer-frequency-select {
+    width: calc(100%-100px);
+    margin-left: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: white;
+    color: #333;
+    resize: none;
+    z-index: 1;
+  }
+  .transfer-receiver-details {
+    width: 250px;
+    margin-left: 50px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    background-color: white;
+    color: #333;
+    resize: none;
+    z-index: 1;
+  }
+  .transfer-receiver-details::-webkit-inner-spin-button,
+  .transfer-receiver-details::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      z-index: 1;
+  }
+
+  .transfer-amount-wrapper {
+    position: relative;
+    width: fit-content;
+    z-index: 1;
+  }
+
+  .currency-symbol {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #333;
+  }
+
+  .transfer-section-contact-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: -20px;
+  }
+
+  .transfer-section-contact-button-wrapper button{
+    background-color: #0D99FF;
+    padding: 15px 45px;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: larger;
+  }
+  .transfer-section-contact-button-wrapper button:hover {
+    background-color: #0b7dda;
+  }
+  .transfer-section-button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .transfer-section-button-wrapper button {
+    background-color:#1a3b4a;
+    padding: 15px 45px;
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    font-size: larger;
+  }
+
+  .transfer-section-button-wrapper button:hover {
+    background-color: #142d39;
+  }
+
+  .transfer-contact-list-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+  }
+
+  .transfer-contact-list-content {
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 600px;
+
+  }
+
+  .transfer-contact-list-content-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+  }
+
+  .transfer-contact-list-content-header p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .transfer-contact-list-content-header img {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .transfer-contact-list-content img:hover {
+    transform: scale(1.6);
+  }
+
+  .transfer-contact-list {
+    position: relative;
+    width: 100%;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .transfer-contact-list-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .transfer-contact-list-header p {
+    font-size: 18px;
+    color: #333;
+  }
+
+  .transfer-contact-list-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .transfer-contact-list-individual {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .transfer-contact-list-individual:hover {
+    background-color: #eaeaea;
+  }
+
+  .transfer-contact-list-individual p {
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+  }
+
+  .transfer-contact-list-individual p:first-child {
+    font-weight: bold;
+  }
+  .transfer-contact-list-header p,
+  .transfer-contact-list-individual p {
+    flex-basis: 33%;
+    text-align: center;
+  }
+
+  .transfer-contact-list-header p:first-child,
+  .transfer-contact-list-individual p:first-child {
+    text-align: left;
+  }
+
+
+  .transfer-contact-list-header p:last-child,
+  .transfer-contact-list-individual p:last-child {
+    text-align: right;
+  }
+
+  @media (max-width: 660px) {
+    .transfer-contact-list-header,
+    .transfer-contact-list-individual {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .transfer-contact-list-header p,
+    .transfer-contact-list-individual p {
+      margin-bottom: 5px;
+    }
+  }
+
+  .transfer-contact-search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .search-input {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    outline: none;
+    background-color: #f9f9f9;
+  }
+
+  .search-input:focus {
+    border-color: #007bff;
+  }
+
+  .search-input::placeholder {
+    color: #aaa;
+  }
+
+  @media (max-width: 768px) {
+    .search-input {
+      max-width: 100%;
+    }
+  }
+
+
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+  }
+
+  .modal-content img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .modal-content img:hover {
+    transform: scale(1.6);
+  }
+  .modal-content p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .modal-content button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1a3b4a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 35px;
+  }
+
+  .modal-content button:hover {
+    background-color: #142d39
+  }
+  @media(max-width:1280px) {
+    .transfer-section-sidebar-first-elem,
+    .transfer-section-sidebar-second-elem,
+    .transfer-section-sidebar-third-elem  {
+      font-size: 22px;
+    }
+  }
+  @media(max-width:1024px) {
+    .transfer-section-sidebar-first-elem,
+    .transfer-section-sidebar-second-elem,
+    .transfer-section-sidebar-third-elem  {
+      font-size: 18px;
+    }
+    .transfer-header p {
+      font-size: 36px;
+    }
+  }
+  @media(max-width:950px) {
+    .transfer-section-content-header {
+      margin-left: 25px;
+    }
+    .transfer-section-content span {
+      margin-left: 25px;
+    }
+    .currency-symbol {
+      left: 15px;
+    }
+  }
+  @media(max-width:830px) {
+    .sender-account-select, .transfer-method-select,
+  .transfer-description-textarea, .transfer-amount-input,
+  .transfer-schedule-select,
+  .transfer-date-input, .transfer-recurring-select,
+  .transfer-frequency-select {
+    margin-left: 10px;
+  }
+  .transfer-receiver-details {
+    margin-left: 10px;
+  }
+  .currency-symbol {
+    left: -25px;
+  }
+  }
+  @media(max-width:800px) {
+    .transfer-header {
+      margin-top: 42px;
+    }
+    .transfer-section-sidebar  {
+      display: none;
+    }
+    .transfer-section-content-header {
+      margin-left: 50px;
+    }
+    .transfer-section-content span {
+      margin-left: 50px;
+    }
+    .sender-account-select, .transfer-method-select,
+  .transfer-description-textarea, .transfer-amount-input,
+  .transfer-schedule-select,
+  .transfer-date-input, .transfer-recurring-select,
+  .transfer-frequency-select {
+
+    margin-left: 50px;
+
+  }
+  .transfer-receiver-details {
+    margin-left: 50px;
+  }
+  .currency-symbol {
+    left: -10px;
+  }
+  }
+  @media(max-width:500px) {
+    .mobile-view {
+      display: flex;
+      color: white;
+      font-weight: 600;
+      font-size: 25px;
+      align-items: center;
+  }
+  }
+  @media(max-width:660px) {
+
+    .sender-account-select, .transfer-method-select,
+  .transfer-description-textarea, .transfer-amount-input,
+  .transfer-schedule-select,
+  .transfer-date-input, .transfer-recurring-select,
+  .transfer-frequency-select {
+
+    margin-left: 10px;
+
+  }
+  .transfer-receiver-details {
+    margin-left: 10px;
+  }
+  .currency-symbol {
+    left: -50px;
+  }
+  .transfer-contact-list-content {
+    min-width: 91vw;
+  }
+  }
+  @media(max-width:600px) {
+
+    .transfer-section-content-header {
+      margin-left: 20px;
+    }
+    .transfer-section-content span {
+      margin-left: 20px;
+    }
+    .currency-symbol {
+      left: -20px;
+    }
+  }
+  @media(max-width:550px) {
+    .transfer-section-content-header {
+      font-size: 27px;
+    }
+    .transfer-section-content-sub-header {
+      font-size: 18px;
+    }
+  }
+  @media(max-width:514px) {
+    .sender-account-select, .transfer-method-select,
+  .transfer-description-textarea, .transfer-amount-input,
+  .transfer-schedule-select,
+  .transfer-date-input, .transfer-recurring-select,
+  .transfer-frequency-select {
+
+    margin-left: 2px;
+
+  }
+  .transfer-receiver-details {
+    margin-left: 2px;
+  }
+  .currency-symbol {
+    left: -20px;
+  }
+  .transfer-section-content-header {
+    margin-left: 10px;
+  }
+  .transfer-section-content span {
+    margin-left: 10px;
+  }
+  .transfer-section-content-header {
+    font-size: 24px;
+  }
+  .transfer-section-content-sub-header {
+    font-size: 17px;
+  }
+  }
+  @media(max-width:400px) {
+    .sender-account-select, .transfer-method-select,
+  .transfer-description-textarea, .transfer-amount-input,
+  .transfer-schedule-select,
+  .transfer-date-input, .transfer-recurring-select,
+  .transfer-frequency-select {
+    width: 200px;
+  }
+  .transfer-receiver-details {
+    width: 200px;
+  }
+  .transfer-header p {
+    font-size: 25px;
+  }
+  }
+
+/* ======== Instruction Mode CSS =========== */
+.instructions-div {
+  margin-left: 45px;
+  width: 300px; /* Set a width for your box */
+  background-color: #f9f9f9; /* Light background for better readability */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 15px; /* Padding inside the box */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}

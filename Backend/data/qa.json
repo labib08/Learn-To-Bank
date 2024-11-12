@@ -1,0 +1,15 @@
+{
+  "how to transfer money": "To transfer money, navigate to your account dashboard, select 'Transfer Funds,' enter the recipient's account details, and confirm the transaction.",
+  "how to schedule a payment": "To schedule a payment, go to the 'Scheduled Payments' section, choose the payment type, set the frequency and number of occurrences, and save.",
+  "how to reset my password": "To reset your password, click on 'Forgot Password' on the login page, enter your email address, and follow the instructions sent to your inbox.",
+  "how to check my balance": "To check your balance, log in to your account dashboard where your current balance and recent transactions are displayed.",
+  "hey": "Hello! How can I assist you today?",
+  "hi": "Hello! How can I assist you today?",
+  "hello": "Hello! How can I assist you today?",
+  "how to enable instruction mode": "Instruction mode can be enabled in your account settings for a guided experience.",
+  "how to make a payment": "To make a payment, go to the 'Payments' section, enter the payee’s details, the amount, and confirm your transaction.",
+  "how to transfer money between different types of accounts": "To transfer money between your own accounts, navigate to 'Transfer Funds,' select the accounts you want to transfer between, enter the amount, and confirm.",
+  "what questions can I ask": "You can ask me about transferring money, checking your balance, scheduling payments, resetting your password, locating card details, downloading statements, and more.",
+  "where can I find my card details": "You can find your card details by going to the 'Cards' section and tapping on the card image to view the details on the back.",
+  "how to view and download my statement": "To view your statement, navigate to 'Account Statements' where you can see recent statements and download a PDF version if needed."
+}
