@@ -1,5 +1,4 @@
 // forgot.jsx
-import axios from 'axios'; // For backend requests
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../Assets/logo.png';
