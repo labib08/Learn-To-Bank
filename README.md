@@ -127,8 +127,8 @@ mkdir C:\data\db
 ```
 Then run the first command again
 # Team members
-Itmam Khan Labib - Frontend
-Andre Chiang - Frontend
-Mitchell - Backend
-Fischer - Backend
-Sahil - Backend
+Itmam Khan Labib - Frontend <br>
+Andre Chiang - Frontend <br>
+Mitchell - Backend <br>
+Fischer - Backend <br>
+Sahil - Backend <br>
