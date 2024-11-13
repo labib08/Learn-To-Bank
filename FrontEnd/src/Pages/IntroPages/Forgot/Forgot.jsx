@@ -40,7 +40,7 @@ export default function ForgotPassword() {
                     <button onClick={handleSendOTP}>Send OTP</button>
                     {error && <p className="error">{error}</p>}
                     <p className="resend-otp">
-                        <span><Link to="/login">Back to login</Link></span>
+                        <span><Link to="/">Back to login</Link></span>
                     </p>
                 </div>
             </div>
