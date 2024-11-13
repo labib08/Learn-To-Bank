@@ -1,3 +1,5 @@
+# Demo
+Link to the website: [https://learn-to-bank.onrender.com](https://learn-to-bank-md60.onrender.com/)
 # Installation
 To begin, please follow the steps below for installing Npm and Node and setting up the server and database:
 ## Download Node and Npm
@@ -119,4 +121,9 @@ Optional if the above command does not work:
 mkdir C:\data\db
 ```
 Then run the first command again
-
+# Team members
+Itmam Khan Labib - Frontend
+Andre Chiang - Frontend
+Mitchell - Backend
+Fischer - Backend
+Sahil - Backend
