@@ -1,8 +1,8 @@
 # Demo
-Link to the website: [https://learn-to-bank.onrender.com](https://learn-to-bank-md60.onrender.com/)
-Dummy account information:
-Username: jack08
-password: asd
+Link to the website: [https://learn-to-bank.onrender.com](https://learn-to-bank-md60.onrender.com/) <br>
+Dummy account information: <br>
+Username: jack08 <br>
+password: asd <br>
 # Installation
 To begin, please follow the steps below for installing Npm and Node and setting up the server and database:
 ## Download Node and Npm
