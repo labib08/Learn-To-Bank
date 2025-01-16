@@ -5,8 +5,8 @@ Dummy account information: <br>
 <br>
 Username: jack08 <br>
 password: asd <br>
-**Link to the Original Repository:**
 
+**Link to the Original Repository:** <br>
 [Click Here](https://github.com/SahilUnimelb/FinTech-FLAMES)
 # Installation
 To begin, please follow the steps below for installing Npm and Node and setting up the server and database:
